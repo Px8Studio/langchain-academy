@@ -83,8 +83,27 @@ It's easy to sign up and offers a very generous free tier. Some lessons (in Modu
 * Studio can be run locally and opened in your browser on Mac, Windows, and Linux.
 * See documentation [here](https://langchain-ai.github.io/langgraph/concepts/langgraph_studio/#local-development-server) on the local Studio development server and [here](https://langchain-ai.github.io/langgraph/cloud/how-tos/studio/quick_start/#local-development-server). 
 * Graphs for LangGraph Studio are in the `module-x/studio/` folders.
-* To start the local development server, run the following command in your terminal in the `/studio` directory each module:
 
+#### Dependencies for Studio
+- The `langgraph dev` command does not install Python packages for you.
+- Use the same virtual environment created above and install dependencies at the repo root:
+```
+# activate your env, then install root deps
+$ source lc-academy-env/bin/activate            # Mac/Linux/WSL
+# PS> .\lc-academy-env\Scripts\Activate.ps1     # Windows PowerShell
+$ pip install -r requirements.txt
+```
+- You do not need to pip install inside each `studio` folder.
+- If a module provides extra requirements, install them explicitly (only if such a file exists):
+```
+$ pip install -r module-4/studio/requirements.txt
+```
+- Verify the CLI is available:
+```
+$ langgraph --version
+```
+
+* To start the local development server, run the following command in your terminal in the `/studio` directory each module:
 ```
 langgraph dev
 ```

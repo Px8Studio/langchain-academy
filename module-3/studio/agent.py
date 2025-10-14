@@ -1,3 +1,7 @@
+"""LangGraph Studio demo agent: arithmetic tools with ChatOpenAI and routing.
+Requires OPENAI_API_KEY in environment when running.
+"""
+
 from langchain_core.messages import SystemMessage
 from langchain_openai import ChatOpenAI
 
